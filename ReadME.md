@@ -1,0 +1,1 @@
+Dieses Website dient als Do it yourself Anleitung für Hendrik, Frith, und Pauls Friendchair IoT Projekt
