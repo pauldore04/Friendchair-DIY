@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendchair DIY Anleitung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Do-It-Yourself Anleitung für den Friendchair</h1>
+        </header>
+
+        <main>
+            <section class="parts-section">
+                <h2>Benötigte Teile:</h2>
+                <ul class="parts-list">
+                    <li>ESP32</li>
+                    <li>Button v1.2</li>
+                    <li>Grove_LED</li>
+                    <li>Weight Sensor</li>
+                    <li>3x Kabel</li>
+                    <li>Micro-USB-Kabel</li>
+                </ul>
+                <p class="special-note"><em>Und natürlich:</em> Einen Stuhl den du transformieren willst</p>
+            </section>
+
+            <section class="setup-section">
+                <h2>ESP32-Setup:</h2>
+                <ol class="setup-steps">
+                    <li>Starte indem du den Button v1.2 mit einem Kabel verbindest. Dieses Kabel verbindest du dann mit dem <strong>IO14 Eingang</strong> deines ESP's.</li>
+                    <li>Danach verbindest du deine Grove LED mit einem Kabel, welches du in den Eingang daneben, dem <strong>IO26 Eingang</strong> steckst.</li>
+                    <li>Dein letztes Kabel verbindest du mit dem Weight Sensor, diese Kabel wird in den <strong>IO33 Eingang</strong>, links von dem LED Eingang, gesteckt.</li>
+                    <li>Dein ESP32 ist jetzt fertig, er braucht nur noch den Code und dann läuft er schon!</li>
+                </ol>
+            </section>
+
+            <section class="code-section">
+                <h2>ESP32-Code:</h2>
+                <div class="download-section">
+                    <p>Lade zuerst den kompletten Friendchair Code herunter:</p>
+                    <a href="friendchair.zip" download="friendchair.zip" class="download-button">
+                        📦 Friendchair Code herunterladen
+                    </a>
+                </div>
+                <p>Nun muss der ganze Code, welcher in diesem Repository unter friendchair liegt, auf den ESP32 drauf. Verbinde dafür dein Micro-USB Kabel mit dem ESP32 und die andere Seite mit deinem Computer.</p>
+                
+                <p>Im Terminal musst du nun in den Friendchair ordner navigieren, dafür gibst du folgendes ein:</p>
+                <div class="code-block">
+                    <code>cd friendchair</code>
+                </div>
+                
+                <p>Das Terminal sollte dann ungefähr so aussehen:</p>
+                <div class="code-block">
+                    <code>.../iot-2025-08/friendchair (main) $</code>
+                </div>
+                
+                <p>Um nun per platformio den Code auf den ESP zu pushen musst du folgenden Befehl eingeben:</p>
+                <div class="code-block">
+                    <code>pio run --target upload</code>
+                </div>
+                
+                <p>Wenn das geklappt hat, sollte es ungefähr so aussehen:</p>
+                <div class="code-block output">
+                    <code>
+                        ...<br>
+                        Writing at 0x00095660... (61 %)<br>
+                        Writing at 0x0009a929... (64 %)<br>
+                        Writing at 0x0009fd70... (67 %)<br>
+                        Writing at 0x000a527d... (70 %)<br>
+                        Writing at 0x000aaa17... (73 %)<br>
+                        Writing at 0x000b018a... (76 %)<br>
+                        Writing at 0x000b5fa9... (79 %)<br>
+                        Writing at 0x000bba78... (82 %)<br>
+                        Writing at 0x000c1565... (85 %)<br>
+                        Writing at 0x000c9a6f... (88 %)<br>
+                        Writing at 0x000d200a... (91 %)<br>
+                        Writing at 0x000d7173... (94 %)<br>
+                        Writing at 0x000dcc93... (97 %)<br>
+                        Writing at 0x000e2307... (100 %)<br>
+                        Wrote 875840 bytes (551012 compressed) at 0x00010000 in 14.3 seconds (effective 491.5 kbit/s)...<br>
+                        Hash of data verified.<br><br>
+                        Leaving...<br>
+                        Hard resetting via RTS pin...<br>
+                        ================== [SUCCESS] Took 32.14 seconds ==================
+                    </code>
+                </div>
+                
+                <p class="success-note">Super, jetzt bist du schon fast fertig!</p>
+                
+                <p>Um überprüfen zu können ob der Code funktioniert, gib folgendes im Terminal ein:</p>
+                <div class="code-block">
+                    <code>pio device monitor</code>
+                </div>
+                
+                <p>Dies öffnet den Serial Monitor und du solltest nun Output sehen, den der ESP32 sendet. Da der ESP32 über WLAN kommuniziert müssen wir das noch einrichten. Öffne auf deinem Handy deine WLAN Einstellungen. Suche nach einem Gerät, welches <strong>ESP32_01</strong> oder <strong>02</strong> heisst. Klicke auf dieses drauf und es sollte sich automatisch eine Seite auf deinem Handy öffnen. Hier musst du nun dein lokales WLAN auswählen und das Passwort eingeben. Wenn du das erfolgreich gemacht hast, schließt sich dieses Fenster automatisch.</p>
+                
+                <div class="highlight-box">
+                    <strong>Super! Dein ESP32 ist nun lauffähig!</strong>
+                </div>
+            </section>
+
+            <section class="installation-section">
+                <h2>Installation am Stuhl:</h2>
+                <p>Als letzten Schritt muss du nur noch dein ESP32 an deinem gewünschten Stuhl anbringen. Wie du das machst ist dir selbst überlassen, aber wir haben eine Empfehlung wie wir es machen würden:</p>
+                
+                <ul class="installation-steps">
+                    <li>Wähle eine deiner Armlehnen deines Stuhls aus</li>
+                    <li>Befestige den ESP32 daneben, also in die Richtung vom Stuhl weg</li>
+                    <li>Den Button und die LED kannst du nun oberhalb deiner Armlehne befestigen, sodass sie dort schnell zu erreichen sind</li>
+                    <li>Das Kabel mit dem Gewichtssensor führst du die Armlehne entlang nach unten und legst den Sensor auf deinen Stuhl drauf</li>
+                </ul>
+            </section>
+
+            <footer class="completion">
+                <h2>Exzellent!</h2>
+                <p>Du hast dir soeben erfolgreich einen Friendchair installiert.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
