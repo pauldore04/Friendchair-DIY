@@ -179,29 +179,36 @@ h2 {
 
 .installation-steps {
     list-style: none;
+    counter-reset: installation-counter;
 }
 
 .installation-steps li {
+    counter-increment: installation-counter;
+    margin-bottom: 20px;
+    padding: 20px;
     background: #fff;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border-left: 3px solid #4a5568;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     position: relative;
-    padding-left: 50px;
+    padding-left: 70px;
 }
 
 .installation-steps li::before {
-    content: "✓";
+    content: counter(installation-counter);
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    color: #4a5568;
-    font-weight: bold;
-    font-size: 1.3rem;
+    background: #4a5568;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .completion {
@@ -284,6 +291,6 @@ p {
     }
     
     .installation-steps li {
-        padding-left: 45px;
+        padding-left: 60px;
     }
 }
