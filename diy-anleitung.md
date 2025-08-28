@@ -83,3 +83,7 @@ Gewichtssensor führst du die Armlehne entlang nach unten und legst den Sensor a
 
 Du hast dir soeben erfolgreich einen Friendchair installiert.
 
+**Jetzt nutzen:**
+
+Du kannst dieses Produkt jetzt auf einer Website benutzen, wo du digital mit deinen Freunden an einem Lagerfeuer sitzen kannst: https://pauldore04.github.io/Friendchair-DIY/
+
