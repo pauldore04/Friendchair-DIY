@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campfire Experience</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scene">
+  <img id="background" src="img/background.png" alt="Background">
+  <img id="campfire_off" src="img/campfire_off.png" alt="Campfire Off" class="visible">
+  <img id="campfire_on" src="img/campfire_on.png" alt="Campfire On">
+  <img id="chair_left" src="img/chair_left.png" alt="Chair Left">
+  <img id="chair_right" src="img/chair_right.png" alt="Chair Right">
+  <img id="controller_left" src="img/controller_left.png" alt="Gaming Left">
+  <img id="controller_right" src="img/controller_right.png" alt="Gaming Right">
+  <img id="popcorn_left" src="img/popcorn_left.png" alt="Movie Left">
+  <img id="popcorn_right" src="img/popcorn_right.png" alt="Movie Right">
+  <img id="book_left" src="img/book_left.png" alt="Idle Left">
+  <img id="book_right" src="img/book_right.png" alt="Idle Right">
+  <img id="guitar_left" src="img/guitar_left.png" alt="Music Left">
+  <img id="guitar_right" src="img/guitar_right.png" alt="Music Right">
+  <img id="logo" src="img/logo.svg.svg" alt="Logo" class="visible">
+</div>
+
+<div class="movie-canvas" id="movieCanvas">
+  <div class="video-container" id="movieVideoContainer">
+    <div class="placeholder">
+      🎬 Ready for movie time! Enter a YouTube URL below.
+    </div>
+  </div>
+  <div class="movie-controls" id="movieControls">
+    <input type="text" id="movieUrl" placeholder="Paste YouTube URL here...">
+    <button onclick="loadMovieVideo()">Load Video</button>
+  </div>
+</div>
+
+
+<div class="mqtt-status" id="mqttStatus">
+  Connecting to MQTT...
+</div>
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
