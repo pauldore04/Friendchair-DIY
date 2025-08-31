@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friend's Chair DIY Anleitung</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="logo.svg.svg" alt="Friend's Chair Logo" class="logo">
+            <img src="logo_DIY.svg" alt="Friend's Chair Logo" class="logo">
         </header>
         
         <div class="subtitle">
-            <h1>Do-It-Yourself Anleitung für den Friend's Chair</h1>
+            <h1>Anleitung</h1>
         </div>
 
         <main>
@@ -45,7 +46,7 @@
                 <div class="download-section">
                     <p>Lade zuerst den kompletten Friend's Chair Code herunter:</p>
                     <a href="friendchair.zip" download="friendchair.zip" class="download-button">
-                        📦 Friend's Chair Code herunterladen
+                        <i class="fas fa-download"></i>
                     </a>
                 </div>
                 <p>Nun muss der ganze Code, welcher in diesem Repository unter friendchair liegt, auf den ESP32 drauf. Verbinde dafür dein Micro-USB Kabel mit dem ESP32 und die andere Seite mit deinem Computer.</p>
@@ -98,7 +99,7 @@
                     <code>pio device monitor</code>
                 </div>
                 
-                <p>Dies öffnet den Serial Monitor und du solltest nun Output sehen, den der ESP32 sendet. Da der ESP32 über WLAN kommuniziert müssen wir das noch einrichten. Öffne auf deinem Handy deine WLAN Einstellungen. Suche nach einem Gerät, welches <strong>ESP32_01</strong> oder <strong>02</strong> heisst. Klicke auf dieses drauf und es sollte sich automatisch eine Seite auf deinem Handy öffnen. Hier musst du nun dein lokales WLAN auswählen und das Passwort eingeben. Wenn du das erfolgreich gemacht hast, schließt sich dieses Fenster automatisch.</p>
+                <p>Dies öffnet den Serial Monitor und du solltest nun Output sehen, den der ESP32 sendet. Da der ESP32 über WLAN kommuniziert, müssen wir das noch einrichten. Öffne auf deinem Handy deine WLAN-Einstellungen. Suche nach einem Gerät, welches <strong>ESP32_01</strong> oder <strong>02</strong> heißt. Klicke darauf und es sollte sich automatisch eine Seite auf deinem Handy öffnen. Hier musst du nun dein lokales WLAN auswählen und das Passwort eingeben. Wenn du das erfolgreich gemacht hast, schließt sich dieses Fenster automatisch.</p>
                 
                 <div class="highlight-box">
                     <strong>Super! Dein ESP32 ist nun lauffähig!</strong>
@@ -111,21 +112,57 @@
                 
                 <ul class="installation-steps">
                     <li>Wähle eine deiner Armlehnen deines Stuhls aus</li>
-                    <li>Befestige den ESP32 daneben, also in die Richtung vom Stuhl weg</li>
+                    <li>Befestige den ESP32 daneben, also in Richtung vom Stuhl weg</li>
                     <li>Den Button und die LED kannst du nun oberhalb deiner Armlehne befestigen, sodass sie dort schnell zu erreichen sind</li>
-                    <li>Das Kabel mit dem Gewichtssensor führst du die Armlehne entlang nach unten und legst den Sensor auf deinen Stuhl drauf</li>
+                    <li>Das Kabel mit dem Gewichtssensor führst du die Armlehne entlang nach unten und legst den Sensor auf deinen Stuhl</li>
                 </ul>
+            </section>
+
+            <section class="states-section">
+                <h2>So funktioniert's:</h2>
+                <p>Sobald du dich auf deinen Friend's Chair setzt, erscheint auf der digitalen Lagerfeuer-Website deine Stuhl-Repräsentation und das gemeinsame Lagerfeuer brennt auf.</p>
+                
+                <p><strong>Verschiedene Aktivitäts-Modi:</strong></p>
+                <ul class="states-list">
+                    <li class="state-item">
+                        <img src="state-images/book_state.png" alt="Buch-Symbol" class="state-icon">
+                        <div class="state-text">
+                            <strong>Buch-Symbol:</strong> Du suchst einfach nur Nähe, bist aber gerade beschäftigt oder brauchst Ruhe
+                        </div>
+                    </li>
+                    <li class="state-item">
+                        <img src="state-images/music_state.png" alt="Musik-Symbol" class="state-icon">
+                        <div class="state-text">
+                            <strong>Musik-Symbol:</strong> Du hast Lust, gemeinsam Musik zu hören oder zu machen
+                        </div>
+                    </li>
+                    <li class="state-item">
+                        <img src="state-images/gaming_state.png" alt="Gaming-Symbol" class="state-icon">
+                        <div class="state-text">
+                            <strong>Gaming-Symbol:</strong> Du möchtest zusammen Computerspiele spielen
+                        </div>
+                    </li>
+                    <li class="state-item">
+                        <img src="state-images/movie_state.png" alt="Popcorn-Symbol" class="state-icon">
+                        <div class="state-text">
+                            <strong>Popcorn-Symbol:</strong> Du willst eine gemeinsame Watchparty starten
+                        </div>
+                    </li>
+                </ul>
+                
+                <p>Die Symbole steuerst du ganz einfach mit dem Button an deinem Stuhl. Wählen beide Freund:innen das Popcorn-Symbol, fährt automatisch eine digitale Leinwand herunter und ihr könnt einen YouTube-Link teilen. Das Video startet synchron auf beiden Seiten und pausiert automatisch, wenn einer von euch aufsteht!</p>
+                
             </section>
 
             <footer class="completion">
                 <h2>Exzellent!</h2>
-                <p>Du hast dir soeben erfolgreich einen Friend´s Chair installiert.</p>
+                <p>Du hast dir soeben erfolgreich einen Friend's Chair installiert.</p>
                 
                 <div class="website-section">
                     <h3>Website Code herunterladen:</h3>
                     <p>Lade den kompletten Website-Code herunter, um das digitale Lagerfeuer lokal zu betreiben:</p>
                     <a href="websitecode.zip" download="websitecode.zip" class="download-button">
-                        💻 Website Code herunterladen
+                        <i class="fas fa-code"></i>
                     </a>
                 </div>
                 
@@ -133,7 +170,7 @@
                     <h3>Jetzt nutzen:</h3>
                     <p>Du kannst dieses Produkt jetzt auf einer Website benutzen, wo du digital mit deinen Freunden an einem Lagerfeuer sitzen kannst:</p>
                     <a href="https://pauldore04.github.io/IotWebsite/" target="_blank" class="website-link">
-                        🔥 Zum digitalen Lagerfeuer
+                        <i class="fas fa-fire"></i>
                     </a>
                 </div>
             </footer>
